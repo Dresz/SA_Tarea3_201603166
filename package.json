@@ -1,0 +1,23 @@
+{
+  "name": "cliente",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dresz/SA_Tarea3_201603166.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dresz/SA_Tarea3_201603166/issues"
+  },
+  "homepage": "https://github.com/Dresz/SA_Tarea3_201603166#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1"
+  }
+}
