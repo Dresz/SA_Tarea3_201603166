@@ -1,3 +1,4 @@
+//repartidor
 var express = require('express')
 var app = express()
 const axios = require('axios')
@@ -12,6 +13,7 @@ app.post('/recibirpedido', function (req, res) {
   })
   app.post('/estado', function (req, res) {
     console.log('estado de la orden: '+req.body.orden)
+    estado = 'en camino a entregar la orden'
     console.log(estado)
     res.send(estado)
   })

@@ -1,3 +1,4 @@
+//Restaurante
 var express = require('express')
 var app = express()
 var estado = "preparando"
@@ -7,7 +8,7 @@ var bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 function function2() {
-    axios.post('http://localhost:8080/recibirpedido', {
+    axios.post('http://localhost:8082/recibirpedido', {
   pedido: pedido
 })
 .then((res) => {
@@ -25,7 +26,7 @@ function function2() {
 app.post('/pedido', function (req, res) {
     pedido = req.body.combo
     console.log('Orden recibida: '+pedido)
-    setTimeout(function2, 1000);
+    setTimeout(function2, 200);
     res.send('recibido, empezaremos a preparar la orden')
   })
 

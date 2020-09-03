@@ -1,10 +1,12 @@
+//cliente
 const axios = require('axios')
 
-axios.post('http://localhost:8081/pedido', {
+axios.post('http://localhost:8082/pedido', {
   combo: 'Combo de cuarto de libra normal con coca-cola'
 })
 .then((res) => {
   //console.log(`statusCode: ${res.statusCode}`)
+  console.log("Estado:")
   console.log(res.data)
 })
 .catch((error) => {
@@ -12,7 +14,7 @@ axios.post('http://localhost:8081/pedido', {
 })
 
 function function2() {
-    axios.post('http://localhost:8081/estado', {
+    axios.post('http://localhost:8082/estado', {
   orden: '1154'
 })
 .then((res) => {
@@ -26,11 +28,12 @@ function function2() {
 setTimeout(function2, 3000);
 
 function function3() {
-    axios.post('http://localhost:8080/estado', {
+    axios.post('http://localhost:8082/estado2', {
   orden: '1154'
 })
 .then((res) => {
   //console.log(`statusCode: ${res.statusCode}`)
+  console.log("Estado:")
   console.log(res.data)
 })
 .catch((error) => {
@@ -39,7 +42,7 @@ function function3() {
 
 }
 function function4() {
-    axios.post('http://localhost:8080/entregado', {
+    axios.post('http://localhost:8082/entregado', {
     orden: '1154'
   })
   .then((res) => {
@@ -50,5 +53,5 @@ function function4() {
     console.error(error)
   })
 }
-setTimeout(function3, 3000);
-setTimeout(function4, 4000);
+setTimeout(function3, 7000);
+setTimeout(function4, 9000);
